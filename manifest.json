@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "顔文字屋 - Kaomojiya",
+  "version": "1.0.0",
+  "description": "簡単に顔文字を検索してコピーできる便利なツール",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ]
+}

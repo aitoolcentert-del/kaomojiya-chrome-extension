@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>顔文字屋</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <div class="header">
+      <h1>🎭 顔文字屋</h1>
+    </div>
+
+    <!-- 検索バー -->
+    <div class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="キーワードで検索... (例: 笑顔、泣く)"
+        autocomplete="off"
+      >
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <!-- 最近使用した顔文字 -->
+    <div id="recentSection" class="recent-section" style="display: none;">
+      <div class="recent-header">
+        <div class="section-title">📌 最近使用</div>
+        <button id="clearRecentButton" class="clear-recent-button">×すべてクリア</button>
+      </div>
+      <div id="recentList" class="kaomoji-grid"></div>
+    </div>
+
+    <!-- 人気カテゴリー -->
+    <div class="categories-section">
+      <div class="section-title">🔥 人気カテゴリー</div>
+      <div id="categoriesList" class="categories-grid"></div>
+      <div class="view-all-container">
+        <a id="viewAllLink" class="view-all-link" href="#">
+          すべてのカテゴリーを見る →
+        </a>
+      </div>
+    </div>
+
+    <!-- 検索結果 / カテゴリー詳細 -->
+    <div id="resultsSection" class="results-section" style="display: none;">
+      <div class="results-header">
+        <button id="backButton" class="back-button">← 戻る</button>
+        <div id="resultsTitle" class="results-title"></div>
+      </div>
+      <div id="resultsList" class="kaomoji-grid"></div>
+      <div id="moreButton" class="more-button-container" style="display: none;">
+        <button id="viewMoreButton" class="view-more-button">
+          もっと見る (残り<span id="remainingCount"></span>個) →
+        </button>
+      </div>
+    </div>
+
+    <!-- コピー通知 -->
+    <div id="copyNotification" class="copy-notification">
+      コピーしました！
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
